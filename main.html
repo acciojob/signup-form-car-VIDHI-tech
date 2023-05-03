@@ -8,76 +8,48 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<form action="action_page.php" style="border:1px solid #ccc">
-    <div class="container">
-      <h1>Signup Form Car</h1>
-      <hr>
 
-      <label for="name"><b>Name*</b></label>
-      <input type="text" placeholder="Name" name="name" required>
-
-      <label for="email"><b>Email*</b></label>
-      <input type="text" placeholder="Email" name="email" required>
-
-      <section>
-        <h4>Gender*</h4>
-        <label class="Gender" required>Female
-          <input type="radio" checked="checked" name="radio" >
-          <span class="checkmark"></span>
-        </label>
-        <label class="gender" required>Male
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
-        </label>
-        <label class="gender" required>Other
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
-        </label>
-      </section>
-
-      <section>
-        <h4>Car Brands*</h4>
-        <label class="brand" required>BMW
-          <input type="checkbox" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-        <label class="brand" required>Audi
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="brand" required>Mercedez
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-      </section>
-
-      <section>
-        <label for="Age">Age*</label>
-        <input type="number" placeholder="y/o" id="age" name="Age" max="2">
-      </section>
-        
-      <section>
+	  <form method="POST">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+      
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      
+        <label>Gender*</label>
+        <input type="radio" id="gender_m" name="gender" value="male" required>
+        <label for="gender_m">Male</label>
+        <input type="radio" id="gender_f" name="gender" value="female" required>
+        <label for="gender_f">Female</label>
+      
+        <label for="cars">Car Brands*</label>
+        <select id="cars" name="cars" required>
+          <option value="">--Please choose an option--</option>
+          <option value="volvo">BMW</option>
+          <option value="saab">Audi</option>
+          <option value="mercedes">Mercedes</option>
+          
+        </select>
+      
+        <label for="age">Age*</label>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+      
         <label for="dob">DOB*</label>
         <input type="date" id="dob" name="dob" required>
-      </section>
+      
+        <label for="tel">Phone number</label>
+        <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx" required>
+      
+        <label for="password">Password*</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
 
-      <section>
-        <label for="Phone Number">Phone Number*</label>
-        <input type="number" id="tel" name="Phone Number" max="10">
-      </section>
-
-      <label for="psw"><b>Password*</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" required> I agree to the TOS*
-      </label>
-  
-      <div class="clearfix">
-        <button type="submit" class="signupbtn">submit</button>
-      </div>
-    </div>
-  </form>
+        <label for="tos">I agree to the TOS.</label>
+        <input type="checkbox" id="tos" name="tos" required>
+      
+        <button type="submit">Submit</button>
+    </form>
+        
+     
     <script type="text/javascript" src="./script.js">
 </script>
 
